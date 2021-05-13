@@ -13,9 +13,8 @@ public class Producto {
 	private String nombre;
 	private String url;
 	
-	public Producto(long id, String nombre, String url) {
+	public Producto(String nombre, String url) {
 		super();
-		this.id = id;
 		this.nombre = nombre;
 		this.url = url;
 	}

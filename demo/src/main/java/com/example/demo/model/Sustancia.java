@@ -19,9 +19,8 @@ public class Sustancia {
 	@ElementCollection
 	private List<Producto> productos;
 	
-	public Sustancia(long id, String nombre, List<Producto> productos) {
+	public Sustancia(String nombre, List<Producto> productos) {
 		super();
-		this.id = id;
 		this.nombre = nombre;
 		this.productos = productos;
 	}

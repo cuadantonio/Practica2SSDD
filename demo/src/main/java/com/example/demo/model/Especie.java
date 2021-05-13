@@ -20,9 +20,8 @@ public class Especie {
 	@ElementCollection
 	private List<Plaga> plagas;
 	
-	public Especie(long id, String nombreVulgar, String nombreCientifico, List<Plaga> plagas) {
+	public Especie(String nombreVulgar, String nombreCientifico, List<Plaga> plagas) {
 		super();
-		this.id = id;
 		this.nombreVulgar = nombreVulgar;
 		this.nombreCientifico = nombreCientifico;
 		this.plagas = plagas;

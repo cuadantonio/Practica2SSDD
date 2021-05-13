@@ -21,9 +21,8 @@ public class Plaga {
 	@ElementCollection
 	private List<Sustancia> sustancias;
 	
-	public Plaga(long id, String nombreVulgar, String nombreCientifico, String url, List<Sustancia> sustancias) {
+	public Plaga(String nombreVulgar, String nombreCientifico, String url, List<Sustancia> sustancias) {
 		super();
-		this.id = id;
 		this.nombreVulgar = nombreVulgar;
 		this.nombreCientifico = nombreCientifico;
 		this.url = url;

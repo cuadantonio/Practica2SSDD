@@ -19,9 +19,8 @@ public class Cultivo {
 	@ElementCollection
 	private List<Especie> especies;
 	
-	public Cultivo(long id, String nombre, List<Especie> especies) {
+	public Cultivo(String nombre, List<Especie> especies) {
 		super();
-		this.id = id;
 		this.nombre = nombre;
 		this.especies = especies;
 	}
