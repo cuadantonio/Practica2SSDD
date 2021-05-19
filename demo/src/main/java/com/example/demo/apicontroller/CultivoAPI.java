@@ -18,7 +18,12 @@ public class CultivoAPI {
 	private CultivoRepository repCultivos;
 	
 	@RequestMapping(value = "/getCultivos", method = RequestMethod.GET)
-	public List<Cultivo> getPeliculas() {
+	public List<Cultivo> getCultivos() {
 		return repCultivos.findAll();
+	}
+	
+	@RequestMapping(value = "/getCultivo", method = RequestMethod.GET)
+	public Cultivo getCultivo() {
+		return repCultivos.findAll().get(0);
 	}
 }

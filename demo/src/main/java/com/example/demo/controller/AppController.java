@@ -22,6 +22,7 @@ import com.example.demo.repository.SustanciaRepository;
 public class AppController {
 	private LinkedList<Cultivo> listacultivos = new LinkedList<Cultivo>();
 	private LinkedList<Especie> listaespecies = new LinkedList<Especie>();
+	private LinkedList<Especie> listaespecies2 = new LinkedList<Especie>();
 	private LinkedList<Plaga> listaplagas = new LinkedList<Plaga>();
 	private LinkedList<Producto> listaproductos = new LinkedList<Producto>();
 	private LinkedList<Sustancia> listasustancias = new LinkedList<Sustancia>();
@@ -48,6 +49,16 @@ public class AppController {
 		repSustancias.save(s);
 		Producto p2 = new Producto("nombre","url");
 		repProductos.save(p2);
+		s.getProductos().add(p2);
+		repSustancias.save(s);
+		p.getSustancias().add(s);
+		repPlagas.save(p);
+		e.getPlagas().add(p);
+		repEspecies.save(e);
+		c.getEspecies().add(e);
+		repCultivos.save(c);
+		Cultivo c2 = new Cultivo("cultivo",listaespecies2);
+		repCultivos.save(c2);
 	}
 
 }
