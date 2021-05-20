@@ -24,15 +24,22 @@ $(function() {
 		lista2 = $('#'+nombreCultivo);
 		lista2.append($('<ul/>').html("Especies:").attr("id","listaEspecies"+nombreCultivo));
 		for(especie in respuesta){
-			$('#listaEspecies'+nombreCultivo).append($('<li/>').html("Nombre cientifico especie:"));
-			$('#listaEspecies'+nombreCultivo).append($('<li>').html(respuesta[especie].nombreCientifico).attr("id",respuesta[especie].nombreCientifico));
-			$('#listaEspecies'+nombreCultivo).append($('<li/>').html("Nombre vulgar especie:"));
+			$('#listaEspecies'+nombreCultivo).append($('<li/>').html("Nombre cientifico especie:").attr("id",respuesta[especie].nombreCientifico+'tag').hide());
+			$('#listaEspecies'+nombreCultivo).append($('<li>').html(respuesta[especie].nombreCientifico).attr("id",respuesta[especie].nombreCientifico).hide());
+			$('#listaEspecies'+nombreCultivo).append($('<li/>').html("Nombre vulgar especie:").hover(function(){
+				$('#'+respuesta[especie].nombreCientifico).show();
+				$('#'+respuesta[especie].nombreCientifico+'tag').show();
+			}));
 			$('#listaEspecies'+nombreCultivo).append($('<li>').html(respuesta[especie].nombreVulgar).attr("id",respuesta[especie].nombreVulgar));
 			$('#listaEspecies'+nombreCultivo).append($('<button onClick="funcionPlaga(\''+respuesta[especie].nombreVulgar+'\')">').html("Plagas").attr("id",respuesta[especie].nombreVulgar+'boton'));
 			$('#listaEspecies'+nombreCultivo).append($('<button onClick="funcionPlagaBotones(\''+respuesta[especie].nombreVulgar+'\')">').html("Ocultar").attr("id",respuesta[especie].nombreVulgar+'boton2').hide());
 		}
 		
 		});
+	}
+	
+	function funcionNomCientifico(nom){
+		alert(nom);
 	}
 	
 	function funcionEspecieBotones(nombreCultivo){
@@ -50,11 +57,14 @@ $(function() {
 		lista3 = $('#'+nombreEspecie);
 		lista3.append($('<ul/>').html("Plagas:").attr("id","listaPlagas"+nombreEspecie));
 		for(plaga in respuesta){
-			$('#listaPlagas'+nombreEspecie).append($('<li/>').html("Nombre cientifico plaga:"));
-			$('#listaPlagas'+nombreEspecie).append($('<li>').html(respuesta[plaga].nombreCientifico).attr("id",respuesta[plaga].nombreCientifico));
+			$('#listaPlagas'+nombreEspecie).append($('<li/>').html("Nombre cientifico plaga:").attr("id",respuesta[plaga].nombreCientifico+'tag').hide());
+			$('#listaPlagas'+nombreEspecie).append($('<li>').html(respuesta[plaga].nombreCientifico).attr("id",respuesta[plaga].nombreCientifico).hide());
 			$('#listaPlagas'+nombreEspecie).append($('<li/>').html("URL plaga:"));
 			$('#listaPlagas'+nombreEspecie).append($('<li>').html(respuesta[plaga].url).attr("id",respuesta[plaga].url));
-			$('#listaPlagas'+nombreEspecie).append($('<li/>').html("Nombre vulgar plaga:"));
+			$('#listaPlagas'+nombreEspecie).append($('<li/>').html("Nombre vulgar plaga:").hover(function(){
+				$('#'+respuesta[plaga].nombreCientifico).show();
+				$('#'+respuesta[plaga].nombreCientifico+'tag').show();
+			}));
 			$('#listaPlagas'+nombreEspecie).append($('<li>').html(respuesta[plaga].nombreVulgar).attr("id",respuesta[plaga].nombreVulgar));
 			$('#listaPlagas'+nombreEspecie).append($('<button onClick="funcionSustancia(\''+respuesta[plaga].nombreVulgar+'\')">').html("Sustancias").attr("id",respuesta[plaga].nombreVulgar+'boton'));
 			$('#listaPlagas'+nombreEspecie).append($('<button onClick="funcionSustanciaBotones(\''+respuesta[plaga].nombreVulgar+'\')">').html("Ocultar").attr("id",respuesta[plaga].nombreVulgar+'boton2').hide());
