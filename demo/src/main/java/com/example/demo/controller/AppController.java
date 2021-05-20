@@ -41,13 +41,13 @@ public class AppController {
 	public void init() {
 		Cultivo c = new Cultivo("a",listaespecies);
 		repCultivos.save(c);
-		Especie e = new Especie("nombreV","nombreC",listaplagas);
+		Especie e = new Especie("nombreVEspecie","nombreCEspecie",listaplagas);
 		repEspecies.save(e);
-		Plaga p = new Plaga("nombreV","nombreC","url",listasustancias);
+		Plaga p = new Plaga("nombreVPlaga","nombreCPlaga","urlPlaga",listasustancias);
 		repPlagas.save(p);
-		Sustancia s = new Sustancia("nombre",listaproductos);
+		Sustancia s = new Sustancia("nombreSustancia",listaproductos);
 		repSustancias.save(s);
-		Producto p2 = new Producto("nombre","url");
+		Producto p2 = new Producto("nombreProducto","url");
 		repProductos.save(p2);
 		s.getProductos().add(p2);
 		repSustancias.save(s);
