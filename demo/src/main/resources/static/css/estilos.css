@@ -1,0 +1,41 @@
+body {background-color: coral;}
+.listaCultivos {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: #33ffac;
+}
+.cultivo {
+  font-family: "Brush Script Std", "Brush Script Std", monospace;
+  color: #1527dc;
+}
+.listaEspecies {
+  font-family: Rockwell, Rockwell, monospace;
+  color: #f6eb07;
+}
+.especie {
+  font-family: "Bodoni MT", "Bodoni MT", monospace;
+  color: #07f60b;
+}
+.listaPlagas {
+  font-family: "Arial Rounded MT Bold", "Arial Rounded MT Bold", monospace;
+  color: #07f2f6;
+}
+.plaga {
+  font-family: "Century Gothic", "Century Gothic", monospace;
+  color: #000000;
+}
+.listaSustancias {
+  font-family: "Franklin Gothic Medium", "Franklin Gothic Medium", monospace;
+  color: #ffffff;
+}
+.sustancia {
+  font-family: "Gabriola", "Gabriola", monospace;
+  color: #6f391c;
+}
+.listaProductos {
+  font-family: "Copperplate Gothic Bold", "Copperplate Gothic Bold", monospace;
+  color: #8c33a2;
+}
+.producto {
+  font-family: "Goudy Old Style", "Goudy Old Style", monospace;
+  color: #a2336c;
+}
