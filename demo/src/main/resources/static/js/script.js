@@ -1,3 +1,8 @@
+/*
+	Esta primera funcion tiene el objetivo de cargar los primeros elementos del arbol los cuales son los cultivos
+	e insertarlos en el codigo html
+*/
+
 $(function() {
 	
 	var urlPelicula='http://localhost:8080/getCultivos/'/*+ encodeURI('Las bicicletas son para el verano')*/;
@@ -15,6 +20,9 @@ $(function() {
 		});
 		
 	});
+/*
+	Esta funcion tiene el objetivo de cargar las especies de un cultivo cuando se pulse el boton apropiado
+*/
 	function funcionEspecie(nombreCultivo){
 		
 		var urlEspecie='http://localhost:8080/getEspecies/'+nombreCultivo+'/';
@@ -38,13 +46,18 @@ $(function() {
 		});
 	}
 
-	
+/* 
+	Esta funcion tiene el objetivo de mostrar un boton, ocultar otro y eliminar las especies correspondientes
+	cuando se pulsa el boton apropiado
+*/
 	function funcionEspecieBotones(nombreCultivo){
 		$('#'+nombreCultivo+'boton').show();
 		$('#'+nombreCultivo+'boton2').hide();
 		$('#listaEspecies'+nombreCultivo).remove();
 	}
-	
+/*
+	Esta funcion tiene el objetivo de cargar las plagas de una especie cuando se pulse el boton apropiado
+*/
 	function funcionPlaga(nombreEspecie){
 		
 		var urlPlaga='http://localhost:8080/getPlagas/'+nombreEspecie+'/';
@@ -69,13 +82,18 @@ $(function() {
 		
 		});
 	}
-	
+/* 
+	Esta funcion tiene el objetivo de mostrar un boton, ocultar otro y eliminar las plagas correspondientes
+	cuando se pulsa el boton apropiado
+*/	
 	function funcionPlagaBotones(nombreEspecie){
 		$('#'+nombreEspecie+'boton').show();
 		$('#'+nombreEspecie+'boton2').hide();
 		$('#listaPlagas'+nombreEspecie).remove();
 	}
-	
+/*
+	Esta funcion tiene el objetivo de cargar las sustancias de una plaga cuando se pulse el boton apropiado
+*/
 	function funcionSustancia(nombrePlaga){
 		
 		var urlSustancia='http://localhost:8080/getSustancias/'+nombrePlaga+'/';
@@ -93,13 +111,18 @@ $(function() {
 		
 		});
 	}
-	
+/* 
+	Esta funcion tiene el objetivo de mostrar un boton, ocultar otro y eliminar las sustancias correspondientes
+	cuando se pulsa el boton apropiado
+*/	
 	function funcionSustanciaBotones(nombrePlaga){
 		$('#'+nombrePlaga+'boton').show();
 		$('#'+nombrePlaga+'boton2').hide();
 		$('#listaSustancias'+nombrePlaga).remove();
 	}
-	
+/*
+	Esta funcion tiene el objetivo de cargar los productos de una sustancia cuando se pulse el boton apropiado
+*/
 	function funcionProducto(nombreSustancia){
 		
 		var urlProducto='http://localhost:8080/getProductos/'+nombreSustancia+'/';
@@ -117,7 +140,10 @@ $(function() {
 		
 		});
 	}
-	
+/* 
+	Esta funcion tiene el objetivo de mostrar un boton, ocultar otro y eliminar los productos correspondientes
+	cuando se pulsa el boton apropiado
+*/
 	function funcionProductoBotones(nombreSustancia){
 		$('#'+nombreSustancia+'boton').show();
 		$('#'+nombreSustancia+'boton2').hide();
