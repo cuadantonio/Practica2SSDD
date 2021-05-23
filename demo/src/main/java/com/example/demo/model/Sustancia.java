@@ -16,7 +16,6 @@ public class Sustancia {
 	private long id;
 	private String nombre;
 	@ManyToMany
-	@ElementCollection
 	private List<Producto> productos;
 	
 	public Sustancia(String nombre, List<Producto> productos) {

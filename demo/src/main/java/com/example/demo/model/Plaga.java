@@ -18,7 +18,6 @@ public class Plaga {
 	private String nombreCientifico;
 	private String url;
 	@ManyToMany
-	@ElementCollection
 	private List<Sustancia> sustancias;
 	
 	public Plaga(String nombreVulgar, String nombreCientifico, String url, List<Sustancia> sustancias) {

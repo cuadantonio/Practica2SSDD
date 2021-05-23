@@ -16,7 +16,6 @@ public class Cultivo {
 	private long id;
 	private String nombre;
 	@ManyToMany
-	@ElementCollection
 	private List<Especie> especies;
 	
 	public Cultivo(String nombre, List<Especie> especies) {

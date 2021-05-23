@@ -17,7 +17,6 @@ public class Especie {
 	private String nombreVulgar;
 	private String nombreCientifico;
 	@ManyToMany
-	@ElementCollection
 	private List<Plaga> plagas;
 	
 	public Especie(String nombreVulgar, String nombreCientifico, List<Plaga> plagas) {
