@@ -362,28 +362,28 @@ public class AppController {
 		e8.getPlagas().add(p16);
 		repEspecies.save(e8);
 
-		Cultivo c1 = new Cultivo("Cultivo 1",listaespecies);
+		Cultivo c1 = new Cultivo("Cultivo1",listaespecies);
 		repCultivos.save(c1);
 		c1.getEspecies().add(e1);
 		c1.getEspecies().add(e2);
 		c1.getEspecies().add(e3);
 		c1.getEspecies().add(e4);
 		repCultivos.save(c1);
-		Cultivo c2 = new Cultivo("Cultivo 2",listaespecies2);
+		Cultivo c2 = new Cultivo("Cultivo2",listaespecies2);
 		repCultivos.save(c2);
-		c1.getEspecies().add(e1);
-		c1.getEspecies().add(e2);
-		c1.getEspecies().add(e8);
+		c2.getEspecies().add(e1);
+		c2.getEspecies().add(e2);
+		c2.getEspecies().add(e8);
 		repCultivos.save(c2);
-		Cultivo c3 = new Cultivo("Cultivo 3",listaespecies3);
+		Cultivo c3 = new Cultivo("Cultivo3",listaespecies3);
 		repCultivos.save(c3);
-		c1.getEspecies().add(e5);
-		c1.getEspecies().add(e6);
-		c1.getEspecies().add(e7);
+		c3.getEspecies().add(e5);
+		c3.getEspecies().add(e6);
+		c3.getEspecies().add(e7);
 		repCultivos.save(c3);
-		Cultivo c4 = new Cultivo("Cultivo 4",listaespecies4);
+		Cultivo c4 = new Cultivo("Cultivo4",listaespecies4);
 		repCultivos.save(c4);
-		c1.getEspecies().add(e8);
+		c4.getEspecies().add(e8);
 		repCultivos.save(c4);
 	}
 
